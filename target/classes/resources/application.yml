@@ -1,0 +1,4 @@
+server:
+ # address: 10.0.16.68
+ # context-path: /test/
+   port: 8089
