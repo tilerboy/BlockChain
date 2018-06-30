@@ -7,18 +7,14 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
-import java.net.URI;
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Hashtable;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
 import java.util.UUID;
-
-import javax.net.ssl.HttpsURLConnection;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -54,6 +50,7 @@ public class EthApi {
         BufferedReader br = null;
         String result = null;// 返回结果字符串
         //Get Ether Balance for a single Address
+       // http://api.etherscan.io/api?module=account&action=txlist&address=0x4C6Adf8086Df9a1bDab35028B3f9e22Be0A79640&startblock=0&endblock=99999999&sort=asc&apikey=M54JAMGC7ABE1T4G6JHJPGEY3YD2EYNBVV
         String httpurl_balance = "https://api.etherscan.io/api?module=account&action=balance&address=0x28FAd8da5597F1054E92b6270B0d87c001385441&tag=latest&apikey=M54JAMGC7ABE1T4G6JHJPGEY3YD2EYNBVV";
         
         //Check Transaction Receipt Status (Only applicable for Post Byzantium fork transactions) 
